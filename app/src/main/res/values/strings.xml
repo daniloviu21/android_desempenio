@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Desempeño_1P</string>
+    <string name="hacer">¿Qué desea hacer?</string>
+    <string name="nombre">Nombre</string>
+    <string name="fechaNac">Fecha nacimiento</string>
+    <string name="planeta">Planeta de origen</string>
+    <string name="universo">Universo</string>
+    <string name="raza">Raza:</string>
+    <string name="terrestre">Terrestre</string>
+    <string name="extraterrestre">Extraterrestre</string>
+    <string name="tecnicas">Técnicas de pelea:</string>
+    <string name="volar">Volar</string>
+    <string name="aumento">Aumento de poder</string>
+    <string name="sentido">Sentido de Ki</string>
+    <string name="trans">Transformación</string>
+    <string name="nivel">Nivel de poder</string>
+    <string name="agregar">Agregar</string>
+    <string name="peleas">Generar peleas</string>
+    <string name="regresar">Regresar</string>
+</resources>

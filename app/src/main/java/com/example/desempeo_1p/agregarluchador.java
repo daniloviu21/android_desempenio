@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -48,13 +50,30 @@ public class agregarluchador extends AppCompatActivity {
         String universo = editTextUniverso.getText().toString();
         String nivel = editTextNivel.getText().toString();
 
-        Luchador nuevoLuchador = new Luchador(nombre, fecha, planeta, universo, nivel);
-        luchadores.add(nuevoLuchador);
+        if (nombre.isEmpty() || fecha.isEmpty() || planeta.isEmpty() || universo.isEmpty() || nivel.isEmpty()){
+            Toast.makeText(this, "Datos vacíos. Por favor, rellene los datos obligatorios.", Toast.LENGTH_SHORT).show();
+        }else{
+            int universoInt = Integer.parseInt(universo);
+            if (universoInt < 1 || universoInt > 12) {
+                Toast.makeText(this, "El universo debe estar entre 1 y 12.", Toast.LENGTH_SHORT).show();
+            }else{
+                int nivelInt = Integer.parseInt(nivel);
+                if (nivelInt < 1 || nivelInt > 1000000){
+                    Toast.makeText(this, "El nivel de poder debe estar entre 1 y 1,000,000.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Luchador nuevoLuchador = new Luchador(nombre, fecha, planeta, universo, nivel);
+                    luchadores.add(nuevoLuchador);
 
-        guardarLuchadores();
+                    guardarLuchadores();
 
-        Intent intent = new Intent(agregarluchador.this, MainActivity.class);
-        startActivity(intent);
+                    Intent intent = new Intent(agregarluchador.this, MainActivity.class);
+                    startActivity(intent);
+                }
+
+            }
+
+        }
+
     }
 
     private void guardarLuchadores() {

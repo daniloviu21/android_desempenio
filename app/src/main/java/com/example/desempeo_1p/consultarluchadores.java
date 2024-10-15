@@ -38,7 +38,6 @@ public class consultarluchadores extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Luchadores", MODE_PRIVATE);
         luchadorManager = new LuchadorManager(sharedPreferences);
 
-        // Inicializar luchadores
         luchadores = luchadorManager.cargarLuchadores();
         if (luchadores.isEmpty()) {
             luchadores = luchadorManager.agregarLuchadoresIniciales();

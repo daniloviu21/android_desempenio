@@ -8,36 +8,56 @@
     android:background="@drawable/soydelamegoku"
     tools:context=".consultarluchadores">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="640dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <Button
-            android:id="@+id/button2"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="regresar"
-            android:layout_gravity="center"
-            android:text="@string/regresar"
-            android:backgroundTint="@color/rojo"/>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/consultar_luchadores" />
+            <Button
+                android:id="@+id/buttonConsultar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consultar"
+                android:layout_gravity="center"
+                android:onClick="consultarLuchadores"/>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="regresar"
+                android:layout_gravity="center"
+                android:text="@string/regresar"
+                android:backgroundTint="@color/rojo"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/consultar_luchadores" />
+
+            <TextView
+                android:id="@+id/textViewLuchadores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:minHeight="100dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

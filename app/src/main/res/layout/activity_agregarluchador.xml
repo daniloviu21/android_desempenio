@@ -121,7 +121,8 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/agregar" />
+            android:text="@string/agregar"
+            android:onClick="agregarLuchador" />
 
         <Button
             android:id="@+id/button3"
